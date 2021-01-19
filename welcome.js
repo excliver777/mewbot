@@ -6,9 +6,9 @@ module.exports = (client) => {
     client.on('guildMemberAdd', (member) => {
       const message = `<@${
         member.id
-      }> 냥! 환영한다 냥! 규칙읽고  ${member.guild.channels.cache
+      }> 냥! 환영한다 냥! 규칙읽으라 냥  ${member.guild.channels.cache
         .get(targetChannelId)
-        .toString()} <#800877706123411486> 에 동의하셔야지 채팅을 치실수있습니다!`
+        .toString()} 그다음  <#800877706123411486> 에 동의하셔야지 채팅을 치실수있습니다!`
   
       const channel = member.guild.channels.cache.get(channelId)
       channel.send(message)
