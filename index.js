@@ -111,4 +111,4 @@ client.on('ready', () => {
     return tmp
   }
   
-client.login(config.token);
+client.login(config.env.token);
