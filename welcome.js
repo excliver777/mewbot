@@ -1,6 +1,6 @@
   
 module.exports = (client) => {
-    const channelId = '' // welcome channel
+    const channelId = '800642354062163981' // welcome channel
     const targetChannelId = '800644470038593576' // rules and info
   
     client.on('guildMemberAdd', (member) => {
