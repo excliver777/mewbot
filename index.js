@@ -8,8 +8,8 @@ const welcome = require('./welcome')
 
 client.on('ready', () => {
   console.log('The client is ready!')
-  welcome(client)
   client.user.setPresence({ activity: { name: ".냐옹이도움 을 치거라 냥"}, status: "online" })
+  welcome(client)
 })
 
   command(client,'ping', (message) => {
