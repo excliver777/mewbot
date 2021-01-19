@@ -109,4 +109,4 @@ client.on('ready', () => {
     return tmp
   }
   
-client.login(config.token)
+client.login(process.env.token);
