@@ -4,12 +4,10 @@ const client = new Discord.Client()
 
 const config = require('./config.json')
 const command = require('./command')
-const welcome = require('./welcome')
 
 client.on('ready', () => {
   console.log('The client is ready!')
   client.user.setPresence({ activity: { name: ".냐옹이도움 을 치거라 냥"}, status: "online" })
-  welcome(client)
 })
 
   command(client,'ping', (message) => {
