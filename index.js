@@ -7,7 +7,7 @@ const command = require('./command')
 
 client.on('ready', () => {
   console.log('The client is ready!')
-  client.user.setPresence({ activity: { name: ".냐옹이도움 | 제작자: 면 | 정상작동"}, status: "online" })
+  client.user.setPresence({ activity: { name: ".냐옹이도움 | 창조자: 면 | 온라인"}, status: "online" })
 })
 
   command(client,'ping', (message) => {
@@ -32,6 +32,9 @@ client.on('ready', () => {
       "진짜 흥",
       "준비중이 명령어임..?",
       "허..나 참내",
+      "작작하세요 조옴 !!!!",
+      "나 냥이지 한테 이를거야",
+      "에블핑 한다 그만해라",
     ];
     
     const Response = Math.floor(Math.random() * number.length);
@@ -47,8 +50,10 @@ client.on('ready', () => {
 
     message.channel.send({embed:embed})
   })
-  command(client, 'test', (message) => {
-    message.channel.send(`hello \n world`)
+  command(client, '.시즈닝 도움', (message) => {
+    let embed = new Discord.MessageEmbed()
+    .setColor(`RANDOM`)
+    .setTitle(` . 붙이지 말고 명령어 사용하세요. . ..`)
   })
   command(client, '추방', (message) => {
     const { member, mentions } = message
