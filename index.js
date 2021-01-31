@@ -56,6 +56,7 @@ client.on('ready', () => {
     let embed = new Discord.MessageEmbed()
     .setColor(`RANDOM`)
     .setTitle(` . 붙이지 말고 명령어 사용하세요. . ..`)
+    message.channel.send({embed:embed})
   })
   command(client, '추방', (message) => {
     const { member, mentions } = message
