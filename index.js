@@ -207,4 +207,4 @@ function checkPermission(message) {
     return tmp
   }
   
-client.login(config.token);
+client.login(process.env.token);
