@@ -20,7 +20,7 @@ client.on('ready', () => {
       )
     })
   })
-  command(client, '준비중', (_message) => {
+  command(client, '준비중', (message) => {
     const number = [
       "트롤짜식아",
       "에옹",
