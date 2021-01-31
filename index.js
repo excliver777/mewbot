@@ -7,7 +7,7 @@ const command = require('./command')
 
 client.on('ready', () => {
   console.log('The client is ready!')
-  client.user.setPresence({ activity: { name: ".냐옹이도움 을 치거라 냥"}, status: "online" })
+  client.user.setPresence({ activity: { name: ".냐옹이도움 | 제작자: 면 | 정상작동"}, status: "online" })
 })
 
   command(client,'ping', (message) => {
@@ -19,6 +19,36 @@ client.on('ready', () => {
         `${guild.name} 는 ${guild.memberCount} 명의 멤버가 있으시네요 앗싸 :smile:`
       )
     })
+  })
+  command(client, '준비중', (_message) => {
+    const number = [
+      "트롤짜식아",
+      "에옹",
+      ":thinking:",
+      "아..네",
+      "난 호구가 아냐",
+      "준비중이다 어쩔래",
+      "아니 준비중인데 왜다들 그래..?",
+      "진짜 흥",
+      "준비중이 명령어임..?",
+      "허..나 참내",
+    ];
+    
+    const Response = Math.floor(Math.random() * number.length);
+    
+    message.channel.send(`${number[Response]}`)
+    })
+  command(client, '프사', (message) => {
+    let embed = new Discord.MessageEmbed()
+
+    .setTitle(`**${message.author.username}** 님의 프로필 입니다! `)
+    .setColor(`#A9F5F2`)
+    .setImage(`https://cdn.discordapp.com/avatars/${message.author.id}/${message.author.avatar}.png?size=2048`)
+
+    message.channel.send({embed:embed})
+  })
+  command(client, 'test', (message) => {
+    message.channel.send(`hello \n world`)
   })
   command(client, '추방', (message) => {
     const { member, mentions } = message
@@ -73,8 +103,9 @@ client.on('ready', () => {
       { name: "ping", desc: "현재 핑 상태" },
       { name: "관리자", desc: "관리자 용 명령어입니다." },
       { name: "냐옹이 음악", desc: "음악 명령어의 대한 도움말 입니다" },
-      { name: "준비중", desc: "준비중입니다" },
-      { name: "준비중", desc: "준비중입니다" },
+      { name: "프사", desc: "당신에 프로필 사진을 확대해서 보여줄수있습니다." },
+      { name: "시즈닝 도움", desc: "누들이라는 놈이 음악기능 냥이봇한테 추가하기 귀찬타고 시즈닝님봇 쓰레요" },
+      { name: "준비중", desc: "준비중인데 이걸 명령어로 치는사람은 없겠지..?" },
     ]
     let commandStr = ""
     let embed = new Discord.MessageEmbed().setAuthor("", helpImg).setColor("#186de6").setFooter(``).setTimestamp()
@@ -176,4 +207,4 @@ function checkPermission(message) {
     return tmp
   }
   
-client.login(process.env.token);
+client.login(config.token);
