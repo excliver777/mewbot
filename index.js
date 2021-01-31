@@ -11,7 +11,7 @@ client.on('ready', () => {
 })
 
   command(client,'ping', (message) => {
-    message.channel.send(`🏓\`${Date.now() -    message.createdTimestamp}\`ms 내`);
+    message.channel.send(`🏓\`${Date.now() -    message.createdTimestamp}\`ms 이시네요 축하드려요`);
 })
    command(client, '서버', (message) => {
     client.guilds.cache.forEach((guild) => {
@@ -20,6 +20,16 @@ client.on('ready', () => {
       )
     })
   })
+
+  if(message.content == `야`) {
+message.channel.send('뭐')
+  }
+  if(message.content == `ㅇ`) {
+    message.channel.send('ㅇ')
+      }
+      if(message.content == `내`) {
+        message.channel.send('내 라고하지마 ! 기분나빠 !')
+          }
   command(client, '준비중', (message) => {
     const number = [
       "트롤짜식아",
