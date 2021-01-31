@@ -21,15 +21,7 @@ client.on('ready', () => {
     })
   })
 
-  if(message.content == `야`) {
-message.channel.send('뭐')
-  }
-  if(message.content == `ㅇ`) {
-    message.channel.send('ㅇ')
-      }
-      if(message.content == `내`) {
-        message.channel.send('내 라고하지마 ! 기분나빠 !')
-          }
+
   command(client, '준비중', (message) => {
     const number = [
       "트롤짜식아",
