@@ -66,6 +66,13 @@ message.channel.send(embed)
     .setFooter('누들 숙제임 저장할곳 없어서 여기다가 함')
     message.channel.send({embed:embed})
   })
+  command(client, '숙제2', (message) => {
+    let embed = new Discord.MessageEmbed()
+    .setColor('RANDOM')
+    .setTitle('https://cdn.discordapp.com/attachments/805045626059358251/805703435806179338/Screenshot_649_LI.jpg')
+    .setFooter('누들 숙제임 저장할곳 없어서 여기다가 함')
+    message.channel.send({embed:embed})
+  })
   command(client, '시즈닝 도움', (message) => {
     let embed = new Discord.MessageEmbed()
     .setColor(`RANDOM`)
@@ -126,7 +133,6 @@ message.channel.send(embed)
       { name: "관리자", desc: "관리자 용 명령어입니다." },
       { name: "냐옹이 음악", desc: "음악 명령어의 대한 도움말 입니다" },
       { name: "프사", desc: "당신에 프로필 사진을 확대해서 보여줄수있습니다." },
-      { name: "시즈닝 도움", desc: "누들이라는 놈이 음악기능 냥이봇한테 추가하기 귀찬타고 시즈닝님봇 쓰레요" },
       { name: "코로나", desc: "코로나 상황을 확인하실수있습니다" },
       { name: "골라", desc: ".골라 <단어1> <단어2> 하시면 봇이 무작위로 단어를 골라줍니다." },
       { name: "준비중", desc: "준비중인데 이걸 명령어로 치는사람은 없겠지..?" },
