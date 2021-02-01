@@ -13,6 +13,14 @@ client.on('ready', () => {
   command(client,'ping', (message) => {
     message.channel.send(`🏓\`${Date.now() -    message.createdTimestamp}\`ms 이시네요 축하드려요`);
 })
+command(client, '냐옹이 음악', (message) => {
+  let embed = new Discord.MessageEmbed()
+  .setColor('RANDOM')
+  .setTitle('시즈닝 도움 을 입력하여 음악을 사용하세요')
+message.channel.send(embed)
+
+})
+
    command(client, '서버', (message) => {
     client.guilds.cache.forEach((guild) => {
       message.channel.send(
@@ -52,7 +60,7 @@ client.on('ready', () => {
 
     message.channel.send({embed:embed})
   })
-  command(client, '.시즈닝 도움', (message) => {
+  command(client, '시즈닝 도움', (message) => {
     let embed = new Discord.MessageEmbed()
     .setColor(`RANDOM`)
     .setTitle(` . 붙이지 말고 명령어 사용하세요. . ..`)
