@@ -10,9 +10,7 @@ client.on('ready', () => {
   client.user.setPresence({ activity: { name: ".냐옹이도움 | 창조자: 면 | 온라인"}, status: "online" })
 })
 
-  command(client,'ping', (message) => {
-    message.channel.send(`🏓\`${Date.now() -    message.createdTimestamp}\`ms 이시네요 축하드려요`);
-})
+ 
 command(client, '냐옹이 음악', (message) => {
   let embed = new Discord.MessageEmbed()
   .setColor('RANDOM')
@@ -58,6 +56,14 @@ message.channel.send(embed)
     .setColor(`#A9F5F2`)
     .setImage(`https://cdn.discordapp.com/avatars/${message.author.id}/${message.author.avatar}.png?size=2048`)
 
+    message.channel.send({embed:embed})
+  })
+
+  command(client, '숙제', (message) => {
+    let embed = new Discord.MessageEmbed()
+    .setColor('RANDOM')
+    .setTitle('https://docs.google.com/forms/d/e/1FAIpQLSe3iyIjhotQPfl1h5jtZhduXGVDcX0tZnOQTZtWwLFWFXnwzg/viewform')
+    .setFooter('누들 숙제임 저장할곳 없어서 여기다가 함')
     message.channel.send({embed:embed})
   })
   command(client, '시즈닝 도움', (message) => {
@@ -116,15 +122,18 @@ message.channel.send(embed)
  command(client, '냐옹이도움', (message) => {
   let helpImg = ""
     let commandList = [
-      { name: "ping", desc: "현재 핑 상태" },
+      { name: "핑", desc: "현재 핑 상태" },
       { name: "관리자", desc: "관리자 용 명령어입니다." },
       { name: "냐옹이 음악", desc: "음악 명령어의 대한 도움말 입니다" },
       { name: "프사", desc: "당신에 프로필 사진을 확대해서 보여줄수있습니다." },
       { name: "시즈닝 도움", desc: "누들이라는 놈이 음악기능 냥이봇한테 추가하기 귀찬타고 시즈닝님봇 쓰레요" },
+      { name: "코로나", desc: "코로나 상황을 확인하실수있습니다" },
+      { name: "골라", desc: ".골라 <단어1> <단어2> 하시면 봇이 무작위로 단어를 골라줍니다." },
       { name: "준비중", desc: "준비중인데 이걸 명령어로 치는사람은 없겠지..?" },
+
     ]
     let commandStr = ""
-    let embed = new Discord.MessageEmbed().setAuthor("", helpImg).setColor("#186de6").setFooter(``).setTimestamp()
+    let embed = new Discord.MessageEmbed().setAuthor("", helpImg).setColor("RANDOM").setFooter(``).setTimestamp()
 
     commandList.forEach((x) => {
       commandStr += `• \`\`${changeCommandStringLength(`${x.name}`)}\`\` : **${x.desc}**\n`
@@ -147,11 +156,13 @@ message.channel.send(embed)
       let commandList = [
         { name: "추방", desc: "멤버를 추방합니다" },
         { name: "차단 ", desc: "멤버를 차단합니다" },
-        { name: "뮤트", desc: "멤버를 뮤트합니다 (x)" },
+        { name: "마스크주기", desc: "멤버를 뮤트합니다" },
         { name: "청소", desc: "메시지를 청소합니다" },
+        { name: "역할추가", desc: "메시지를 청소합니다" },
+        { name: "역할삭제", desc: "특정유저의 약할을 삭제합니다." },
       ]
       let commandStr = ""
-      let embed = new Discord.MessageEmbed().setAuthor("", helpImg).setColor("#186de6").setFooter(``).setTimestamp()
+      let embed = new Discord.MessageEmbed().setAuthor("", helpImg).setColor("RANDOM").setFooter(``).setTimestamp()
   
       commandList.forEach((x) => {
         commandStr += `• \`\`${changeCommandStringLength(`${x.name}`)}\`\` : **${x.desc}**\n`
